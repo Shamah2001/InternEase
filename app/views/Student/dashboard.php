@@ -1,64 +1,12 @@
-<?php require_once("../inc/header.php"); ?>
+<?php require_once("../app/views/inc/header.php"); ?>
 
 <div class="container">
-        <div class="navigation">
-            <img src = "assets/InternEaseLogo.png" alt="">
-            <ul>
-                <li>
-                    <a href="dashboard.html">
-                        <span class="icon"><i class="fa-solid fa-gauge-high"></i></span>
-                        <span class="title">Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="advertisements.html">
-                        <span class="icon"><i class="fa-solid fa-rectangle-ad"></i></span>
-                        <span class="title">Advertisements</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="complaints.html">
-                        <span class="icon"><i class="fa-solid fa-circle-question"></i></span>
-                        <span class="title">Complaints</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="profile.html">
-                        <span class="icon"><i class="fa-solid fa-user"></i></span>
-                        <span class="title">Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="schedule.html">
-                        <span class="icon"><i class="fa-solid fa-calendar-days"></i></span>
-                        <span class="title">Schedule</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="selectionList.html">
-                        <span class="icon"><i class="fa-solid fa-rectangle-list"></i></ion-icon></span>
-                        <span class="title">Selection List</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
-                        <span class="title">Sign Out</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <?php require_once("../app/views/inc/sidebar.php"); ?>
 
         <!-- main -->
 
         <div class="main">
-            <header class="top-bar">
-                <div class="title">Dashboard</div>
-                <div class="user-profile">
-                    <div class="username">Shamah</div>
-                    <a href="profile.html"><img class="avatar" src="/assets/shamah.png" alt="User Avatar"></a>
-                </div>
-            </header>
+            <?php require_once("../app/views/inc/topbar.php"); ?>
             <div class="content">
                 <div class="heading" style="padding-top: 40px;">My Profile</div>
                 <div class="profile-container">
@@ -196,4 +144,4 @@ const adTypesChart = new Chart(document.getElementById('adTypesChart').getContex
 
     </script>
 
-<?php require_once("../inc/footer.php"); ?>
+<?php require_once("../app/views/inc/footer.php"); ?>

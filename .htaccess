@@ -1,8 +1,8 @@
+# Restrict access to all folders except the 'public' folder
 RewriteEngine On
 
-# Allow direct access to the public folder
+# Allow access to the 'public' folder
 RewriteCond %{REQUEST_URI} !^/public/
-RewriteRule ^(.*)$ public/$1 [L]
 
-# Prevent access to other directories or files directly
-RewriteRule ^$ - [F]
+# If not in the 'public' folder, redirect to it
+RewriteRule ^(.*)$ /public/$1 [L]
