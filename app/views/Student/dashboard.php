@@ -1,6 +1,6 @@
 <?php require_once("../app/views/inc/header.php"); ?>
 
-<div class="container">
+    <div class="container">
         <?php require_once("../app/views/inc/sidebar.php"); ?>
 
         <!-- main -->

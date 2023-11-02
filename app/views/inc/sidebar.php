@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?=ROOT?>/selectionList">
+                    <a href="<?=ROOT?>/selectionlist">
                         <span class="icon"><i class="fa-solid fa-rectangle-list"></i></ion-icon></span>
                         <span class="title">Selection List</span>
                     </a>
