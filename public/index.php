@@ -2,8 +2,6 @@
 
 session_start();
 
-echo"haanfe";
-
 require "../app/core/init.php";
 
 
