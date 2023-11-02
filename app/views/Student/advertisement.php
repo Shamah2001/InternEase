@@ -142,3 +142,5 @@
         }
 
     </script>
+
+<?php require_once("../app/views/inc/footer.php"); ?>
