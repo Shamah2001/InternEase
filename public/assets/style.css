@@ -119,7 +119,7 @@ body{
         padding: 0;
     }
     
-    .info-list li {
+    .info-list label {
         margin: 10px 0;
         display: flex;
         justify-content: space-between;
@@ -288,3 +288,41 @@ body{
     width: 800px;
     height: 500px;
 }
+
+/* Container for the form */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for labels and input fields */
+.info-list label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.info-list input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #eee;
+}
+
+/* Center the form */
+.center {
+    text-align: center;
+}
+
+/* Add responsive CSS */
+@media screen and (max-width: 600px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .info-list input[type="text"] {
+        width: 100%;
+    }

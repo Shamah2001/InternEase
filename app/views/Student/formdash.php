@@ -8,6 +8,8 @@
 
 <?php include("../app/views/inc/header.php"); ?>
 
+
+
 <section class="container" grey-text>
     <h2 class="center">My Profile</h2>
     <form action="" method="" class="white">

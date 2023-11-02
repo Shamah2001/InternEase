@@ -11,12 +11,29 @@
                 <div class="heading" style="padding-top: 40px;">My Profile</div>
                 <div class="profile-container">
                     <div class="display-info">
-                        <ul class="info-list">
-                            <li><span>Name:</span> <span class="editable" contenteditable="true">Shamah</span></li>
-                            <li><span>Registration No:</span> <span class="editable" contenteditable="true">2021/IS/###</span></li>
-                            <li><span>E-mail:</span> <span class="editable" contenteditable="true">shamah@email.com</span></li>
-                            <li><span>Status:</span> <span class="status-info">Pending</span></li>
-                        </ul>
+                    <div class="form-container">
+        <form>
+            <ul class="info-list">
+                <li>
+                    <label for="name">Your Name:</label>
+                    <input type="text" name="name" id="name">
+                </li>
+                <li>
+                    <label for="regno">Registration No:</label>
+                    <input type="text" name="regno" id="regno">
+                </li>
+                <li>
+                    <label for="email">Your Email:</label>
+                    <input type="text" name="email" id="email">
+                </li>
+                <li>
+                    <label for="status">Application Status:</label>
+                    <input type="text" name="status" id="status">
+                </li>
+            </ul>
+        </form>
+    </div>
+
                     </div>
                     <button class="edit-button" onclick="editInfo()">Edit</button>
                 </div>
