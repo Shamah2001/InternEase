@@ -5,12 +5,12 @@
     
         <div class="main">
             <?php require_once("../app/views/inc/topbar.php"); ?>
-            
+
             <div class="content">
                 <div class="profile-box">
                     <div class="profile-header">
                         <div class="profile">
-                            <img class="profile-picture" src="/assets/shamah.png" alt="Profile Picture">
+                            <img class="profile-picture" src="<?=ROOT?>/assets/shamah.png" alt="Profile Picture">
                             <div class="profile-name">Shamah</div>
                         </div>
                         <button class="edit-button">Edit</button>
