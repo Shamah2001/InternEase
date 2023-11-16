@@ -1,8 +1,4 @@
 <!--Dashboard model-->
-<?php
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
