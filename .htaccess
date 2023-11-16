@@ -1,4 +1,3 @@
-# Restrict access to all folders except the 'public' folder
 RewriteEngine On
 
 # Allow access to the 'public' folder
