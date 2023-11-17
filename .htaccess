@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Allow access to the 'public' folder
+RewriteCond %{REQUEST_URI} !^/public/
+
+# If not in the 'public' folder, redirect to it
+RewriteRule ^(.*)$ /public/$1 [L]
