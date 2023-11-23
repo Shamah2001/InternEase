@@ -1,7 +1,7 @@
  <?php
 
 //connect to database
-$conn = mysqli_connect('localhost', 'shamah', 'test1234','group_project');
+$conn = mysqli_connect('localhost', 'root', '','intern_ease');
 
 if(!$conn){
     echo ' error: ' .mysqli_connect_error();

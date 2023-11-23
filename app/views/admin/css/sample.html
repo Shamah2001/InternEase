@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS styles for navigation */
+        .navigation {
+            background-color: #111618;
+            padding: 20px;
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navigation ul li {
+            padding: 5px 0;
+            transition: background-color 0.3s;
+        }
+
+        .navigation ul li:hover {
+            background-color: #25a8d8;
+        }
+
+        .navigation ul li a {
+            display: inline-block;
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navigation ul li a .icon {
+            min-width: 30px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .navigation ul li a .icon ion-icon {
+            font-size: 24px;
+        }
+
+        .navigation ul li a .title {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sample navigation menu -->
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <div class="title">Home</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </div>
+                    <div class="title">Settings</div>
+                </a>
+            </li>
+            <!-- Add more menu items here -->
+        </ul>
+    </div>
+</body>
+</html>
