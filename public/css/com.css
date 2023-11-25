@@ -274,3 +274,114 @@ body
     font-size: 14px;
     font-weight: 500;
 }
+
+/* ADMIN */
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto; 
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 16px;
+}
+
+.notification {
+    display: flex;
+    width: fit-content;
+    
+}
+
+.notibutton{
+    margin: 1vw;
+    position:static;
+    padding: 2vw 2vw 2vw 2vw;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    background-color:white;
+    color:#010e14;
+    transition: background-color 0.3s;
+    font-size:1.5vw;
+    font-weight:500;
+    border-radius: 4vw;
+}
+
+.notibutton a{
+    text-decoration:none;
+}
+
+.notibutton div{
+    text-align: center;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+}
+
+.notibutton:hover{
+    color:#060808;
+    background-color: #89c3e8 ;
+}
+
+.notibutton:hover a{
+    color: #030405;
+}
+
+.notification .notibutton:nth-child(3) {
+    background-color: rgb(8, 47, 144);
+    /* Add any other styles you want to apply */
+}
+
+.notification .notibutton:nth-child(3){
+    background-color: rgb(8, 47, 144);
+    color: #000000;
+    /* Add any other styles you want to apply */
+}
+
+.notification .notibutton:nth-child(3n):hover{
+    color:#c9dbdb;
+    background-color: #0cb1df ;
+}
+
+.notification .notibutton:nth-child(3n):hover a{
+    color: #010106;
+}
+
+.notibutton:nth-child(3) a > div div:nth-child(2n) {
+    border-radius: 2vw;
+    color: #0b0b5e;
+    background-color: #bcdfdf ;
+
+}
+
+.notibutton:nth-child(3):hover a > div div:nth-child(2n){
+    color: #bfdbf8;
+    background-color: #0f061e ;
+
+}
+
+
+select {
+    border: 2px solid #2f89fd;
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    margin-right: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    text-align: left;
+}
+
+
+
+.userhover {
+    padding: 1.5vw;
+    margin-top:1.5vw;
+    margin-bottom:2vh;
+    margin-right:1vw;
+    margin-left:1vw;
+    font-size: 0.5vw;
+    height: fit-content;
+    width: 15%;
+    display: block;
+    border-radius: 2vw;
+    color: #020a13;
+    background-color: #96b8e8;
+    transition: 0.4s;
+}
