@@ -7,6 +7,8 @@ if(!$conn){
     echo ' error: ' .mysqli_connect_error();
 }
 
+
+/*
 //write query for all profiles
 $sql = 'SELECT Reg_no, Name, E-mail * FROM profile ORDER BY Status';
 
@@ -18,9 +20,11 @@ $proflie = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 //free result from memory
 mysqli_free_result($result);
-
+print_r($proflie)
 //close connection
+*/
+
 mysqli_close($conn);
 
-print_r($proflie)
+
 ?>

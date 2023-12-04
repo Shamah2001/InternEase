@@ -3,16 +3,16 @@
 // Example: include('connection.php');
 // Ensure your database connection is established
 include ("../core/connection.php");
-include ("../core/config.php");
+//include ("../core/config.php");
 include ("../core/Database.php");
 
 class AdminModel {
     private $connection;
 
-    public function __construct($dbConnection) {
-        $this->connection = $dbConnection;
+    public function __construct($conn) {
+        $this->connection = $conn;
         // You can also establish the database connection within the constructor
-        // $this->connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+         $this->connection = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
         // Check for connection errors here if applicable
     }
 
@@ -26,17 +26,34 @@ class AdminModel {
         }
 
         // Prepare and execute the SQL UPDATE statement
-        $updateStatement = $this->connection->prepare("UPDATE admins SET $column = ? WHERE adminid = ?");
+        $updateStatement = $this->connection->prepare("UPDATE admins SET $column = ? WHERE Admin_ID = ?");
         $updateStatement->bind_param("ss", $value, $id);
 
         if ($updateStatement->execute()) {
-            return true; // Update successful
+            echo '<script type="text/javascript">';
+            echo 'alert("Updated Sucessfully");';
+            echo 'window.location.href = "'.$_SERVER['PHP_SELF'].'";'; 
+            echo '</script>';
+            return true;
         } else {
-            return false; // Update failed
+            echo '<script type="text/javascript">';
+            echo 'alert("Updated Sucessfully");';
+            echo 'window.location.href = "'.$_SERVER['PHP_SELF'].'";'; 
+            echo '</script>';
+            return false; // Update failed   
         }
     }
+    
+    public function getAllProfiles() {
+            $sql = 'SELECT * FROM , Name, `E-mail` FROM profile ORDER BY Status';
+            $result = mysqli_query($this->connection, $sql);
+            $profiles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            mysqli_free_result($result);
+            return $profiles;
+        }
+}
+    
 
     // Other methods for CRUD operations on admins can be added here
     // Examples: createAdmin(), deleteAdmin(), getAdminById(), etc.
-}
 ?>
