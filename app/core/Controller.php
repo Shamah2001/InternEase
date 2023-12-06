@@ -1,12 +1,12 @@
 <?php 
 
 
-Trait Controller
+Class Controller
 {
 
-	public function view($dname, $fname)
+	public function view($dname, $fname,$data=array())
 	{
-
+		extract($data);
 		$foldername = "../app/views/".$dname."/";
 		if (file_exists($foldername)) {
 			$filename = $foldername.$fname.".php";

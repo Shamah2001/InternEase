@@ -2,6 +2,7 @@
 // Include necessary files and classes
 include_once("../core/connection.php");
 include_once("../core/config.php");
+include_once("../core/Database.php");
 include_once("../models/AdminModel.php"); // Assuming AdminModel.php contains your AdminModel class
 
 // Handle the form submission for updating admin attributes
@@ -15,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateadmin"])) {
     $confirmPassword = $_POST["confirmPassword"];
 
     // Create an instance of AdminModel
-    $adminModel = new AdminModel($conn); // Pass the database connection to the model
+    $adminModel = new AdminModel(connect()); // Pass the database connection to the model
 
     // Check if the input is valid and update the admin attribute accordingly
     if ($adminModel->updateAdmin($id, $column, $updateValue, $confirmPassword)) {

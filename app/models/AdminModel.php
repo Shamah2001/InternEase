@@ -4,7 +4,7 @@
 // Ensure your database connection is established
 include ("../core/connection.php");
 //include ("../core/config.php");
-include ("../core/Database.php");
+//include ("../core/Database.php");
 
 class AdminModel {
     private $connection;

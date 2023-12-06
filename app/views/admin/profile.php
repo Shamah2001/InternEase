@@ -60,7 +60,7 @@
             confirmPasswordField.style.display = "none";
         }
     }
-
+/*
     $(document).ready(function () {
         $("form").submit(function (event) {
             var formData = {
@@ -81,7 +81,8 @@
 
             event.preventDefault();
         });
-});
+    
+});*/
 </script>
 </body>
 </html>

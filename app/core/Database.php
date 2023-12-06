@@ -1,6 +1,6 @@
 <?php 
 
-Trait Database
+Class Database
 {
 
 	private function connect()
@@ -10,7 +10,7 @@ Trait Database
 		return $con;
 	}
 
-	public function query($query, $data = [])
+	public function query($query, $data = array())
 	{
 
 		$con = $this->connect();
@@ -19,7 +19,7 @@ Trait Database
 		$check = $stm->execute($data);
 		if($check)
 		{
-			$result = $stm->fetchAll(PDO::FETCH_OBJ);
+			$result = $stm->fetchAll(PDO::FETCH_ASSOC);
 			if(is_array($result) && count($result))
 			{
 				return $result;
@@ -29,7 +29,7 @@ Trait Database
 		return false;
 	}
 
-	public function get_row($query, $data = [])
+	public function get_row($query, $data = array())
 	{
 
 		$con = $this->connect();
