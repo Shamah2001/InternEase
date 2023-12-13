@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateadmin"])) {
     $confirmPassword = $_POST["confirmPassword"];
 
     // Create an instance of AdminModel
+    $dbconnection = new Database;
     $adminModel = new AdminModel(connect()); // Pass the database connection to the model
 
     // Check if the input is valid and update the admin attribute accordingly
@@ -31,4 +32,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateadmin"])) {
         exit();
     }
 }
+
+function viewcomplaints() {
+    // Initialize or include necessary components (such as database connection) here
+    $dbconnection = new Database;
+
+    // Create an instance of AdminModel
+    $adminModel = new AdminModel(connect()); // Pass the database connection to the model
+
+    // Fetch all entries from the 'feedback' table using the model
+    $feedbackEntries = $adminModel->getComplaints();
+
+    // Pass the fetched data to your view for displaying (You may use your view rendering logic here)
+    // For example, you can use var_dump or loop through the entries and display them in HTML
+    if ($feedbackEntries) {
+        foreach ($feedbackEntries as $entry) {
+            var_dump($entry); // Display each entry (You should replace this with your view logic)
+        }
+    } else {
+        echo "No feedback entries found.";
+    }
+}
+
+
 ?>

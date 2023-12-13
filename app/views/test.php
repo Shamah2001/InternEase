@@ -1,3 +1,3 @@
-<?ph
+<?php
     print_r($rows)
 ?>

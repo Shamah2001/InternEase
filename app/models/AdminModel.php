@@ -45,12 +45,20 @@ class AdminModel {
     }
     
     public function getAllProfiles() {
-            $sql = 'SELECT * FROM , Name, `E-mail` FROM profile ORDER BY Status';
+            $sql = 'SELECT Resume,Status,CGPA,Email,FirstName,LastName,Phone FROM Students';
             $result = mysqli_query($this->connection, $sql);
             $profiles = mysqli_fetch_all($result, MYSQLI_ASSOC);
             mysqli_free_result($result);
             return $profiles;
         }
+
+    public function getComplaints() {
+        $sql = 'SELECT * FROM Feedback';
+        $result = mysqli_query($this->connection, $sql);
+        $complaints = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        mysqli_free_result($result);
+        return $complaints;
+    }
 }
     
 
