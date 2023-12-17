@@ -8,9 +8,9 @@ include_once("../models/AdminModel.php");
 
 class adminprofile extends Controller{
 
-    function changeprofile(){
+    public function changeprofile(){
         
-        $this->view('admin','profile');
+        
 
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateadmin"])) {
         
@@ -33,6 +33,8 @@ class adminprofile extends Controller{
                 exit();
             }
         }
+
+        $this->view('admin','profile');
 
     }
 

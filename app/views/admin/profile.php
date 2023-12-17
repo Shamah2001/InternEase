@@ -4,17 +4,16 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/com.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="../../public/css/com.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" type="text/css" href="../../../public/css/com.css?v=<?php echo time(); ?>">
 </head>
 <body>
 
-<div class="outer">
-    <div class="container">
-        <?php include_once('sidemenu.php') ?>
-    </div>
 
-    <div class="content">
+<div class="container">
+    <?php include_once('sidemenu.php') ?>
+    <div class ="main">
+        <div class="content">
             <form class="update-form" method="POST" action='../../controllers/Admin_profile.php'>
 
                 <div class="formgroup">
@@ -43,8 +42,11 @@
                     <input type="submit" class="btn" value="Update" name="updateadmin">
                 </div>
             </form>
+        </div>
     </div>
 </div>
+   
+
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

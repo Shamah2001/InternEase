@@ -13,7 +13,7 @@
 
 <div class="container">
         <?php include_once('sidemenu.php') ?>
-        <div class ="main">
+    <div class ="main">
             <div class = "topbar">
                 <div class = "toggle">
                     <ion-icon name="menu-outline"></ion-icon>
@@ -27,39 +27,40 @@
 
             </div>
 
-   <div class="details">
-        <div class="companyList">
-                <div class = "cardHeader">
-                    <h2>Complaints</h2>
-                    <!-- <a href="#" class="btn">View All</a>  -->
+        <div class="details">
+                <div class="companyList">
+                        <div class = "cardHeader">
+                            <h2>Complaints</h2>
+                            <!-- <a href="#" class="btn">View All</a>  -->
+                        </div>
+                    <table>
+                    
+                        <thead>
+                            <tr>
+                                <td>Review-status</td>
+                                <td>complaint ID</td>
+                                <td>title</td>
+                                <td>Description</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php if ($complaintsArray && count($complaintsArray) > 0): ?>
+                        <?php foreach ($complaintsArray as $complaint): ?>
+                            <tr>
+
+                                <td><?php echo $complaint['status']; ?></td>
+                                <td><?php echo htmlspecialchars($complaint['complaint_id']); ?></td>
+                                <td><?php echo htmlspecialchars($complaint['title']); ?></td>
+                                <td> <a href="description.php?id=<?php echo $complaint['description']; ?>">View </a></td>
+                                <td><button>Check</button> <td>
+
+                            </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>   
+                        </tbody>
+                    </table>
                 </div>
-            <table>
-            
-                <thead>
-                    <tr>
-                        <td>Review-status</td>
-                        <td>complaint ID</td>
-                        <td>title</td>
-                        <td>Description</td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php if ($complaintsArray && count($complaintsArray) > 0): ?>
-                <?php foreach ($complaintsArray as $complaint): ?>
-                    <tr>
-
-                        <td><?php echo $complaint['status']; ?></td>
-                        <td><?php echo htmlspecialchars($complaint['complaint_id']); ?></td>
-                        <td><?php echo htmlspecialchars($complaint['title']); ?></td>
-                        <td> <a href="description.php?id=<?php echo $complaint['description']; ?>">View </a></td>
-                        <td><button>Check</button> <td>
-
-                    </tr>
-                    <?php endforeach; ?>
-                <?php endif; ?>   
-                </tbody>
-            </table>
         </div>
     </div>
 
