@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <div class="navigation">
+    <img src = "../views/admin/images/InternEaseLogo.png" alt="">
     <img src = "images/InternEaseLogo.png" alt="">
     <ul>
     <li>
@@ -16,7 +17,7 @@
             </a>
         </li>
         <li>
-            <a href="complaints.php">
+            <a href="viewComplaints.php">
                 <span class="icon"><ion-icon name="calendar-clear-outline"></ion-icon></span>
                 <span class="title">Complaints</span>
             </a>

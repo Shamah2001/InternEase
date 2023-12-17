@@ -385,3 +385,14 @@ select {
     background-color: #96b8e8;
     transition: 0.4s;
 }
+
+button {
+    /* Define general button styles */
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+}

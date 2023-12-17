@@ -3,7 +3,7 @@
 /**
  * Main Model trait
  */
-Trait Model
+trait Model
 {
 	use Database;
 

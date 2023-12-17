@@ -1,3 +1,4 @@
 <?php
-print_r($rows);
+echo '<pre>';
+print_r($data);
 ?>
