@@ -301,13 +301,13 @@ body
 }
 
 .notification {
+    display: flex;
     width: fit-content;
     
 }
 
 .notibutton{
     margin: 1vw;
-    position:static;
     padding: 2vw 2vw 2vw 2vw;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     cursor: pointer;

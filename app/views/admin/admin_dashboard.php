@@ -25,7 +25,6 @@
 
             </div>
 
-    <div class="content">
         <div class="notification">
                     <div class="notibutton">
                         <a href="">
@@ -66,7 +65,6 @@
                     </div>  
                          
         </div>
-    <div>
     
 
     <div class="details">
