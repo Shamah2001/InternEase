@@ -3,15 +3,15 @@
 /**
  * Main Model trait
  */
-trait Model
+class Model extends Database
 {
-	use Database;
+	
 
 	protected $limit 		= 10;
 	protected $offset 		= 0;
 	protected $order_type 	= "desc";
 	protected $order_column = "id";
-	public $errors 		= [];
+	public $errors 		= array();
 
 	public function findAll()
 	{
@@ -21,7 +21,7 @@ trait Model
 		return $this->query($query);
 	}
 
-	public function where($data, $data_not = [])
+	public function where($data, $data_not = array())
 	{
 		$keys = array_keys($data);
 		$keys_not = array_keys($data_not);
@@ -43,7 +43,7 @@ trait Model
 		return $this->query($query, $data);
 	}
 
-	public function first($data, $data_not = [])
+	public function first($data, $data_not = array())
 	{
 		$keys = array_keys($data);
 		$keys_not = array_keys($data_not);

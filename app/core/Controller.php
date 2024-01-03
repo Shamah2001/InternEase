@@ -1,26 +1,27 @@
-<?php 
+<?php
 
-class Controller
-{
+    class Controller {
 
-	public function view($dname, $fname,$data = array())
-	{
-		extract($data);
-		$foldername = "../views/".$dname."/";
-		if (file_exists($foldername)) {
-			$filename = $foldername.$fname.".php";
-			if(file_exists($filename))
-			{
-				require $filename;
-			}else{
+        public $database;
+        public $conn;
 
-			$filename = "../views/404.view.php";
-			require $filename;
-			}
-		}else{
-			$filename = "../views/404.view.php";
-			require $filename;
-		}
-		
-	}
-}
+        //dependency injection - passing database connection to controller
+        public function __construct() {
+            $this->database = new Database();
+            $this->conn = $this->database->connection();
+        }
+
+        //function to load model
+        public function model($model) {
+            require_once '../app/model/' . $model . '.php';
+            return new $model();
+        }
+
+
+        //function to load view
+        public function view($view, $data = []) {
+            
+            require_once '../app/view/' . $view . '.view.php';
+        }
+
+    }  

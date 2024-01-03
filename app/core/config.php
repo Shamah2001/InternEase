@@ -1,6 +1,5 @@
 <?php 
 
-
 if($_SERVER['SERVER_NAME'] == 'localhost')
 {
 	/** database config **/
@@ -8,25 +7,13 @@ if($_SERVER['SERVER_NAME'] == 'localhost')
 	define('DBHOST', 'localhost');
 	define('DBUSER', 'root');
 	define('DBPASS', '');
-	define('DBDRIVER', '');
 	
-	define('ROOT', 'http://localhost/Student_frontend/public');
-
-}else
-{
-	/** database config **/
-	define('DBNAME', 'intern_ease');
-	define('DBHOST', 'localhost');
-	define('DBUSER', 'root');
-	define('DBPASS', '');
-	define('DBDRIVER', '');
-
-	// define('ROOT', 'https://www.iQube.com');
+	define('ROOT', 'http://localhost/internease/public');
 
 }
-
-define('APP_NAME', "PDC");
-define('APP_DESC', "Empowering Education through Personalizing Learnign");
+ 
+define('APP_NAME', "My Webiste");
+define('APP_DESC', "Best website on the planet");
 
 /** true means show errors **/
 define('DEBUG', true);
