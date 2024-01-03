@@ -4,8 +4,9 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
     <title>Manage Admin</title>
-    <link rel="stylesheet" type="text/css" href="../../../public/css/com.css?v=">
-    <link rel="stylesheet" type="text/css" href="../../public/css/com.css?v=">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/com.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="../../public/css/com.css?v=<?php echo time(); ?>">
+
 
 </head>
 <body>
